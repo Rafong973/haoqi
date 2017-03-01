@@ -58,3 +58,17 @@ function collection(id,thisObj){
 	},2000);
 	
 }
+
+// 导航栏点击事件
+$(".nav-slide").click(function(event) {
+	var ul = $(this).find('ul');
+	if(ul.length>0){
+		if(ul.is(":visible")){
+			ul.hide(300);
+		}else{
+			ul.show(300);
+		}
+	}else{
+		
+	}
+});
