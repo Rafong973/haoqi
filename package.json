@@ -1,0 +1,31 @@
+{
+  "name": "haoqi",
+  "version": "1.0.0",
+  "description": "HaoQi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files css/*,script/*,*.html "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafong973/haoqi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafong973/haoqi/issues"
+  },
+  "homepage": "https://github.com/Rafong973/haoqi#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
+  }
+}

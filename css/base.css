@@ -1,0 +1,38 @@
+/* CSS Document */
+html{font-size:62.5%; font-family:'Microsoft YaHei';}
+/** 全局reset **/
+body,header,footer,section,div,span,p,img,a,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,i,b,u,del,menu,nav,fieldset,legend,article,aside,details,figcaption,hgroup,pre,code,from,blockquote,th,td,tr,hr,table,img,figure,button,input,textarea,dt+dd{padding:0;margin:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family:Microsoft Yahei,Helvetica,Arial;}
+body{background-color:#fff;}
+/* webkit引擎的浏览器取消默认样式(-webkit-appearance) */
+li{ list-style:none;}
+input,textarea{-webkit-user-select:auto !important;user-select:auto !important;/*-webkit-appearance:none;*/}
+input{ border-radius:0;}
+:focus{outline:none;}
+img{vertical-align:middle;border:0 none;}
+ul{list-style:none;}
+a{text-decoration:none;color:inherit;}
+section{display:block;margin:0 auto;}
+header,footer{margin:0 auto;width:100%;}
+em,i{font-style:normal;}
+html,body{width:100%;height:100%; min-width:320px;}
+button,input{border:0 none;}
+u,del{text-decoration:none;}
+/* webkit引擎的浏览器取消默认样式 */
+input[type="submit"],input[type="reset"],input[type="button"],input[type="password"],input[type="text"],button{-webkit-appearance:none;outline:none;}
+
+.f5f5f5{ background:#f5f5f5;}
+
+/*封装控件*/
+.tip{ position:relative;position:fixed; width:100%; height:100%;z-index:998; left:0; top:0; display:none;}
+.tip-text{ position:absolute; z-index:2;width:70%; text-align:center; padding:25px 20px; font-size:1.6rem; color:#fff; background:url(../images/zhi-bg.png); left:50%; top:50%; border-radius:15px;}
+
+.PLoading{position:relative;position:fixed; width:100%; height:100%;z-index:998; left:0; top:0;}
+.PLoading-box{position:absolute; z-index:2; height:60px; line-height:60px; padding:0 20px;font-size:1.6rem; color:#fff; background:url(../images/zhi-bg.png); left:30%; top:50%; border-radius:15px;}
+.PLoading-text{ padding-left:43px; height:100%; background:url(../images/loading.gif) 0 center no-repeat;}
+
+.hm-alert{ width:100%; height:100%; position:fixed; z-index:998; left:0; top:0; background:url(../images/tming.png);}
+.hm-alert-box{ width:250px; margin:35% auto; background:#191919; text-align:center;}
+.hm-alert-title{ font-size:1.6rem; color:#fff; padding-top:15px;}
+.hm-alert-text{ font-size:1.8rem; color:#fff; padding-top:5px; padding-bottom:15px;}
+.hm-alert-btn{ width:100%; height:40px; background:#fff;}
+.hm-alert-btn a{ display:block; width:100%; height:40px; line-height:40px; font-size:1.8rem;}
