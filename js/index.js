@@ -61,7 +61,8 @@ function collection(id,thisObj){
 
 // 导航栏点击事件
 $(".nav-slide").click(function(event) {
-	event.stopPropagation()
+	event.stopPropagation();
+	$('.nav-mask').show();
 	var ul = $(this).find('ul');
 	if(ul.length>0){
 		if(ul.is(":visible")){
@@ -82,5 +83,6 @@ $(".nav-mask").click(function(){
 })
 
 $(".nav-li").click(function(event) {
-	console.log($(this));
+	console.log(this)
+	$('.nav-mask').hide();
 });
