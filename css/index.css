@@ -3,6 +3,10 @@ html{
     max-width: 540px;
     margin: 0 auto;
 }
+/* 公共 */
+.tc{text-align: center;}
+.flex{display: flex;}
+.link{color: #4c8ab7;}
 /*头部*/
 .index_header{ width:100%; height:44px;}
 .index_header_box{ width:100%; height:44px; position:relative; position:fixed; z-index:10; left:0; top:0; background:#3E3E3E;}
@@ -120,3 +124,64 @@ html{
 .gotop{ width:100%; height:100%; background:#999 url(../images/side-icon02.png) center no-repeat; background-size:18px auto; border-radius:50%;}
 
 .nav-ul{position: absolute;width: 100px;top:2.8125rem;left:50%;transform:translateX(-50%);background-color: #FFF;z-index: 999;text-align: center;border-bottom-left-radius: 0.25rem;border-bottom-right-radius: 0.25rem;display: none;}
+.nav-mask{position: fixed;width: 100%;height: 100%;top: 0;left: 0;opacity: 0;}
+
+/* 登录注册 */
+.login-data{width:100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.data-title{
+    margin-bottom: 0.9375rem;
+}
+.form-group{
+    width: 90%;
+    margin:0 auto;
+    height: 2.1875rem;
+    line-height: 2.125rem;
+    margin-bottom: 0.9375rem;
+    label{
+        width: 25%;
+        margin-left: 2.5%;
+        display: inline-block;
+        text-align: right;
+    }
+    .name,.codeImg{
+        height: 100%;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        text-indent: 0.625rem;
+    }
+    .codeImg{
+        width: 25%;
+    }
+    .name{
+        width: 50%;
+    }
+    .imgCode{
+        display: inline-block;
+        margin-right: 2.5%;
+        width: 20%;
+        max-height: 2.1875rem;
+        vertical-align: top;
+    }
+}
+.login-add{
+    color: #8a8a8a;
+    margin-bottom: 1.5625rem;
+}
+.login-icon{
+    width: 200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    a{
+        flex: 1;
+        display: block;
+        max-width: 2.0rem;
+        height: 2.0rem;
+        &:not(:last-child){
+            margin-right: 5%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}

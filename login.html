@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 适应移动端start -->
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>登陆</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" href="dist/css/index.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+</head>
+
+<body class="f5f5f5">
+    <div class="login-data">
+        <div class="data-title tc">
+            <h1>登陆</h1>
+        </div>
+        <div class="form-group">
+            <label for="name">用户名：</label>
+            <input type="text" class="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="name">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+            <input type="password" class="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="name">验证码：</label>
+            <input type="text" class="codeImg" name="name">
+            <img src="./images/code.png" class="imgCode" alt="">
+        </div>
+        <div class="login-add">
+            <div class="data-title tc">
+                <p>使用合作网站登陆</p>
+            </div>
+            <div class="login-icon flex">
+                <a href="#">
+                    <img src="images/qq.png" alt="QQ" width="100%">
+                </a>
+                <a href="#">
+                    <img src="images/wechat.png" alt="weixin">
+                </a>
+                <a href="#">
+                    <img src="images/weibo.png" alt="sina">
+                </a>
+            </div>
+        </div>
+        <div class="tc">
+            <a href="#" class="link">快速去注册</a>
+        </div>
+    </div>
+</body>
+</html>

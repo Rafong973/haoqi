@@ -61,14 +61,26 @@ function collection(id,thisObj){
 
 // 导航栏点击事件
 $(".nav-slide").click(function(event) {
+	event.stopPropagation()
 	var ul = $(this).find('ul');
 	if(ul.length>0){
 		if(ul.is(":visible")){
 			ul.hide(300);
+			$(this).parents('.swiper-container').css('overflow', 'hidden');
 		}else{
+			$(this).parents('.swiper-container').css('overflow', 'initial');
 			ul.show(300);
 		}
 	}else{
 		
 	}
+});
+$(".nav-mask").click(function(){
+	$('.nav-ul').hide(300);
+	$('.nav-ul').parents('.swiper-container').css('overflow', 'hidden');
+	$(this).hide();
+})
+
+$(".nav-li").click(function(event) {
+	console.log($(this));
 });
