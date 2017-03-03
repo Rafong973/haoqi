@@ -48,9 +48,24 @@
 <body class="f5f5f5">
 <header class="index_header">
 	<div class="index_header_box">
-        <div class="index_login"><a href="#"><img src="images/user.png" /></a></div>
-        <div class="index_logo"><a href="#"><img src="images/logo.png"/></a></div>
-        <div class="index_sou"><a href="#"><img src="images/seek-bg.png" /></a></div>
+        <div class="index_login">
+            <a href="login.html">
+                <img src="images/user.png" />
+            </a>
+        </div>
+        <div class="index_logo">
+            <a href="#">
+                <img src="images/logo.png"/>
+            </a>
+        </div>
+        <div class="index_sou">
+            <a href="#">
+                <img src="images/seek-bg.png" />
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" class="search-input">
+        </div>
     </div>
 </header>
 <div class="nav-mask"></div>
@@ -61,25 +76,25 @@
             <a class="swiper-slide nav-slide" href="#">
             	<span>健身运动</span>
             	<ul class="nav-ul">
-            		<li class="nav-li">
-            			<span>健身会所</span>
-            		</li>
-            		<li class="nav-li">
-            			<span>游泳馆</span>
-            		</li>
-            		<li class="nav-li">
-            			<span>瑜伽馆</span>
-            		</li>
-            		<li class="nav-li">
-            			<span>舞蹈室</span>
-            		</li>
-            		<li class="nav-li">
-            			<span>羽毛球馆</span>
-            		</li>
-            		<li class="nav-li">
-            			<span>乒乓球馆</span>
-            		</li>
-            	</ul>
+                    <li class="nav-li" data="module.html">
+                        <span>健身会所</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>游泳馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>瑜伽馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>舞蹈室</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>羽毛球馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>乒乓球馆</span>
+                    </li>
+                </ul>
             </a>
             <a class="swiper-slide nav-slide" href="#">
             	<span>养生文化</span>
@@ -131,7 +146,7 @@
                 </div>
             </p>
         </div>
-        <div class="detail-content">
+        <div class="detail-content row">
             <div class="detail-text">
                 <p class="duan">
                     关于金华奕健身管理有限公司（以下简称奕健身）是金华市早的专门从事健身运动的企业，至今已经13年。面对竞争激烈的市场环境，奕健身能够稳健、持续发展，在健身企业中立于不败之地，是金华地区久负盛名的健身龙头企业。
@@ -144,8 +159,54 @@
                 <iframe frameborder="0" width="100%" height="auto" src="https://v.qq.com/iframe/player.html?vid=f0376ns8vp2&tiny=0&auto=0" allowfullscreen></iframe>
             </div>
         </div>
+        <div class="img-row">
+            <div class="img-box">
+                <div class="img-title tc spe">
+                    江南世贸旗舰店景图
+                </div>
+                <div class="img-content">
+                    <img src="images/1.jpg" alt="江南世贸旗舰店景图" width="100%">
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-title tc spe">
+                    万达维度店景图
+                </div>
+                <div class="img-content">
+                    <img src="images/2.jpg" alt="江南世贸旗舰店景图" width="100%">
+                </div>
+            </div>
+        </div>
+        <div class="concart row">
+            <p>奕健身五家分店地址:</p>
+            <p>江南世贸店：0579-83181718    (浙江省金华市李渔路888号金华世贸D区5楼)</p>
+            <p>万达维度店：0579-89006700    （浙江省金华市万达金街12幢05-09号）</p>
+            <p>珠宝城福华店：0579-82111669 82111366  （浙江省金华市八一北街88号珠宝城5楼老福华银泰）</p>
+            <p>江北世贸店：0579-89109166        (浙江省金华市八一北街623号1-3F)</p>
+            <p>金职校区店：0579-82661116     (浙江省金华市金华职业技术学院体育运动健身中心)</p>
+            <p class="tc">
+                关注，扫描下方微信二维码
+            </p>
+            <p class="tc">
+                <img src="images/66.jpg" alt="二维码" class="concart-code">
+            </p>
+            <p class="spe">
+                如果你有好的养生、健身资讯欢迎投稿浩启网或联系客服人员，让更多的人群了解与分享。
+            </p>
+        </div>
     </div>
     
+    <div class="comments">
+        <div class="detail-title">
+            <p class="big-title">评论</p>
+        </div>
+        <div class="row">
+            <textarea name="comments" id="com-area" class="com-area"></textarea>
+        </div>
+        <div class="row hid">
+            <a href="#" class="fr link-submit dd-title">发表评论</a>
+        </div>
+    </div>
 </section>
 
 <div class="mreturn">
@@ -168,6 +229,37 @@
 	    <div class="footer_text">Copyright © 2016-2017 All Rights Reserved. 浙ICP备16030349 </div>
 	</div>
 </footer>
+<script>
+//滚动图swiper.min.js
+var swiperSlide = new Swiper('.swiperSlide', {
+    pagination: '.carousel_btn',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 0,
+    loop: true,
+    speed:500,
+    autoplay:4000,
+    autoplayDisableOnInteraction: false
+}); 
+
+
+    var swiper = new Swiper('.push_box', {
+        pagination: '.push_btn',
+        paginationClickable: true,
+        nextButton: '.push_next',
+        prevButton: '.push_prev',
+        spaceBetween: 30,
+        effect: 'fade'
+    });
+
+var swiper = new Swiper('.nav .swiper-container', {
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    paginationClickable: true,
+    spaceBetween:0
+});
+
+</script>
 <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

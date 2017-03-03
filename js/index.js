@@ -83,6 +83,54 @@ $(".nav-mask").click(function(){
 })
 
 $(".nav-li").click(function(event) {
-	console.log(this)
+	var url = $(this).attr("data");
+	window.location.href = url;
 	$('.nav-mask').hide();
 });
+
+$(".index_sou").click(function(event) {
+	$(".search").css('width', '100%');
+	var search = document.getElementsByClassName('search')[0];
+	search.addEventListener('touchstart',touch.start,false);
+	search.addEventListener('touchmove',touch.move,false);
+	search.addEventListener('touchend',touch.end,false);
+});
+
+var touch = (function(){
+	var x,y;
+	return{
+		start:function(event){
+			event = event || window.event;
+			var touches = event.targetTouches;
+			x = touches[0].pageX;
+		},
+		move:function(event){
+			event = event || window.event;
+			var touches = event.targetTouches;
+			y = touches[0].pageX;
+			if(y>x){
+				if(y-x >= 80){
+					$(".search").css('width', '.1px');
+					this.value = '';
+					this.removeEventListener('touchstart',touch.start,false);
+					this.removeEventListener('touchmove',touch.move,false);
+				}else{
+					return;
+				}
+			}else{
+				if(x-y >= 80){
+					$(".search").css('width', '.1px');
+					this.value = '';
+					this.removeEventListener('touchstart',touch.start,false);
+					this.removeEventListener('touchmove',touch.move,false);
+				}else{
+					return;
+				}
+			}
+		},
+		end:function(event){
+			event = event || window.event;
+			var touches = event.targetTouches;
+		}
+	}
+})()
