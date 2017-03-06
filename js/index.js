@@ -1,4 +1,40 @@
 // JavaScript Document
+
+(function(){
+	// active;
+	$("[data="+ $("#nav-name").val() +"]").addClass('active');
+	// //滚动图swiper.min.js
+	var swiperSlide = new Swiper('.swiperSlide', {
+		pagination: '.carousel_btn',
+		slidesPerView: 1,
+		paginationClickable: true,
+		spaceBetween: 0,
+		loop: true,
+		speed:500,
+		autoplay:4000,
+		autoplayDisableOnInteraction: false
+	});	
+
+
+	var swiper = new Swiper('.push_box', {
+	    pagination: '.push_btn',
+	    paginationClickable: true,
+	    nextButton: '.push_next',
+	    prevButton: '.push_prev',
+	    spaceBetween: 30,
+	    effect: 'fade'
+	});
+	// 定位
+    var index = $(".active").index();
+    var swiper = new Swiper('.nav .swiper-container', {
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        paginationClickable: true,
+        spaceBetween:0,
+        initialSlide :index,
+    });
+
+})();
 //向上滚动动画
 function scrollTops(){
 	$("html, body").animate({ scrollTop: 0 }, 200);
@@ -62,6 +98,7 @@ function collection(id,thisObj){
 // 导航栏点击事件
 $(".nav-slide").click(function(event) {
 	event.stopPropagation();
+	$(".nav-ul").hide(300)
 	$('.nav-mask').show();
 	var ul = $(this).find('ul');
 	if(ul.length>0){
