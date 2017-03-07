@@ -12,6 +12,8 @@ html{
 .link{color: #4c8ab7;}
 .fl{float: left;}
 .fr{float: right}
+.fff{color: #fff;}
+.white{background-color: #fff;}
 .flex-box{flex-wrap: wrap}
 .middle{vertical-align: middle;}
 .dd-title{padding-left: 0.625rem;padding-right: 0.625rem;}
@@ -41,7 +43,7 @@ html{
 .nav .swiper-container{z-index: 9999999;}
 
 
-.mokuai{ width:100%; margin-bottom:2px;}
+.mokuai{ width:100%; margin-bottom:10px;}
 .mokuai_title{ width:100%; height:40px; line-height:40px; font-size:1.8rem; text-align:center; background:#fff;}
 .mokuai_box{ width:100%; overflow:hidden;}
 .mokuai_item{width: 50%;float: left;display: inline;margin-bottom: 2px;}
@@ -290,7 +292,8 @@ html{
 }
 .row{
     width: 95%;
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right: auto;
 }
 .com-area{
     resize: none;
@@ -320,5 +323,86 @@ html{
     border-top: 1px solid #c40000
 }
 .shop-detail{
-    margin: 15px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.shop-price{
+    font-size: 16px;
+    text-align: right;
+    color: #c40000;
+
+}
+.num-btn{
+    color: #c0c0c0;
+    input{
+        width: 30px;
+        margin-left: 30px;
+        display: inline-block;
+        height: 100%;
+    }
+    i{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #c0c0c0;
+        &:before{
+            display: inline-block;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .jian{
+        left: 65px;
+        &:before{
+            content: "-";
+        }
+    }
+    .plus{
+        left: 5px;
+        &:before{
+            content: "+";
+        }
+    }
+}
+.pic-title{
+    line-height: 35px;
+    border-top: 1px solid #c40000;
+    margin-bottom: 15px;
+    a{
+        padding: 10px 20px;
+        border-right: 1px solid #c0c0c0;
+        border-bottom: 1px solid #c0c0c0;
+    }
+}
+
+.new-box{
+    background: #fff;
+    .bigItem_box{
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+    .bigItem{
+        margin-bottom: 0;
+        border-top: 0;
+    }
+}
+.new-title{
+    max-height: 150px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #c0c0c0;
+}
+.new-title-font{
+    background: rgba(0, 0, 0, .5);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 14px;
 }
