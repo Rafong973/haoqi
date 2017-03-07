@@ -303,3 +303,22 @@ html{
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+/* 购买 */
+.buy{
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+.buy-btn{
+    color: #fff;
+    background-color: #c40000;
+    padding: 0 20px;
+    border-top: 1px solid #c40000
+}
+.shop-detail{
+    margin: 15px 0;
+}
