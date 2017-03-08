@@ -131,10 +131,11 @@ html{
 
 /* 登录注册 */
 .login-data{width:100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
-.link-submit{line-height: 1;padding-top:0.625rem;padding-bottom:0.625rem;display: inline-block;color: #fff;background-color: #498dc8;}
+.link-submit{line-height: 1;padding-top:0.625rem;padding-bottom:0.625rem;display: inline-block;color: #fff;background-color: #5aa700;}
 .data-title{margin-bottom: 0.9375rem;}
 .sml-btn{width: 7.5rem;max-width: 7.5rem;}
 .mid-btn{width: 9.6875rem;max-width: 9.6875rem;}
+.lar-btn{width: 50%;}
 .form-group{
     width: 90%;
     margin:0 auto;
@@ -409,4 +410,7 @@ html{
 .pic-text-text{
     line-height: 25px;
     font-size: 14px;
+}
+.sml-font{
+    font-size: 12px;
 }
