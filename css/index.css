@@ -138,10 +138,12 @@ html{
 .lar-btn{width: 50%;}
 .form-group{
     width: 90%;
-    margin:0 auto;
+    margin-left:auto;
+    margin-right: auto;
     height: 2.1875rem;
     line-height: 2.125rem;
-    margin-bottom:0.9375rem;
+    margin-bottom:2.1875rem;
+    position: relative;
     .label{
         width: 25%;
         margin-left: 2.5%;
@@ -166,6 +168,12 @@ html{
         width: 20%;
         max-height: 2.1875rem;
         vertical-align: top;
+    }
+    .tip-label{
+        color: #e20909;
+        position: absolute;
+        bottom: -25px;
+        left: 30%;
     }
 }
 .login-add{

@@ -171,7 +171,7 @@ var touch = (function(){
 		}
 	}
 })();
-
+// 加
 $(".plus").click(function() {
 	var input = $(this).siblings('input');
 	var num = parseInt(input.val());
@@ -179,7 +179,7 @@ $(".plus").click(function() {
 		input.val(num+1);
 	}
 });
-
+// 减
 $(".jian").click(function(){
 	var input = $(this).siblings('input');
 	var num = parseInt(input.val());
