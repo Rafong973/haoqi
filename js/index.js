@@ -170,4 +170,20 @@ var touch = (function(){
 			var touches = event.targetTouches;
 		}
 	}
-})()
+})();
+
+$(".plus").click(function() {
+	var input = $(this).siblings('input');
+	var num = parseInt(input.val());
+	if(input.val() && num >= 0){
+		input.val(num+1);
+	}
+});
+
+$(".jian").click(function(){
+	var input = $(this).siblings('input');
+	var num = parseInt(input.val());
+	if(input.val() && num > 1){
+		input.val(num-1);
+	}
+})

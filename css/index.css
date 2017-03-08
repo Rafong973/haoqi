@@ -201,7 +201,7 @@ html{
     }
 }
 .module-btn{
-    background-color: #e8ae49;
+    background-color: #5aa700;
     color: #fff;
     padding: 0.3125rem;
     position: absolute;
@@ -235,9 +235,9 @@ html{
 .detail-content{
     line-height: 25px;
     font-size: 14px;
-    .duan{
-        text-indent: 2em;
-    }
+}
+.duan{
+    text-indent: 2em;
 }
 .spe{
     color: rgb(227, 108, 9);
@@ -282,9 +282,9 @@ html{
 .concart{
     line-height: 30px;
     font-size: 14px;
-    .concart-code{
-        width: 50%;
-    }
+}
+.concart-code{
+    width: 50%;
 }
 .comments{
     margin-top: 30px;
@@ -404,5 +404,9 @@ html{
     position: absolute;
     bottom: 0;
     color: #fff;
+    font-size: 14px;
+}
+.pic-text-text{
+    line-height: 25px;
     font-size: 14px;
 }
