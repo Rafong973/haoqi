@@ -63,6 +63,40 @@ $("#reg").click(function(){
         return false;
     }
 });
+// 忘记密码第一步验证
+$("#first").click(function(event) {
+	var input = document.getElementsByClassName('input');
+	var judge = vail(input);
+	if(judge){
+		var data = getdata(input);
+		$.post('/vaildate', data, function(res) {
+			if(res.status==1){
+				$(".input").val("");
+				$(".first").hide();
+				$(".second").show(300);
+			}
+		});
+	}
+});
+$("#second").click(function(event) {
+	var input = document.getElementsByClassName('passVail');
+	var judge = vail(input);
+	console.log(judge);
+	if(judge){
+		var data = getdata(input);
+		$.post('/reset', data, function(res) {
+			if(res.status==1){
+				app.alert('修改成功。带你去登陆');
+				setTimeout(function(){
+					window.location.href = 'index.html';
+				},1000)
+			}else{
+				app.alert('修改失败，你需要重试');
+				return;
+			}
+		});
+	}
+});
 $("#login-btn").click(function(){
     var input = document.getElementsByClassName('input');
     var judge = vail(input);
