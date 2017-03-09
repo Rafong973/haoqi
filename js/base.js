@@ -89,3 +89,17 @@ function checkbox(){
 		}
 	});
 }
+var app = {
+	time:null,
+	alert:function(text){
+		if($('.alert').length > 0) return;
+		text = text ? text : '提示';
+		clearTimeout(this.time);
+		var div = '<div class="alert">'+ text +'</div>';
+		$("body").append(div);
+		this.time = setTimeout(function(){
+			$(".alert").remove();
+			text = '';
+		},1500)
+	}
+}

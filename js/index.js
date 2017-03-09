@@ -187,3 +187,4 @@ $(".jian").click(function(){
 		input.val(num-1);
 	}
 })
+
