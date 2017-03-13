@@ -188,3 +188,8 @@ $(".jian").click(function(){
 	}
 })
 
+// 筛选事件
+function inputChange(i){
+	$(".location-select").text(i);
+	// 执行筛选后的操作
+}

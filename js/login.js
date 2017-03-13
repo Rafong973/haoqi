@@ -116,11 +116,11 @@ $("#login-btn").click(function(){
     }
 });
 // 验证方法
-function vail(dom){
+function vail(dom,location){
     var k = false;
     if(dom.length > 1){
         for(var i = 0;i < dom.length;i++){
-            if(!switchDom(dom[i])){
+            if(!switchDom(dom[i],location)){
                 k = false;
                 break;
             }else{
@@ -130,11 +130,11 @@ function vail(dom){
     }
     return k;
 }
-function switchDom(dom){
+function switchDom(dom,location){
     var a = dom.getAttribute("name"),
         v = dom.value,
         j = false,
-        p = dom.parentElement.lastElementChild,
+        p = location ? document.getElementsByClassName("warm")[0] : dom.parentElement.lastElementChild,
         s = dom.previousElementSibling.innerText || " ";
     switch(a){
         case 'house':
@@ -170,7 +170,7 @@ function switchDom(dom){
         		p.innerText = '密码不匹配，请重新输入';
         	}else{
         		j = true;
-        		p.innerText = '';
+        		p.innerText = ' ';
         	}
     	break;
     }

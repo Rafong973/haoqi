@@ -13,7 +13,7 @@ const imagemin = require('gulp-imagemin');//图片压缩
 const processors = [
 	autoprefixer(
 		{
-		browsers: ['last 3 version'],
+		browsers: ['last 5 version'],
 		cascade: true,
 		remove: true
 	})

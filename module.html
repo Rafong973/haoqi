@@ -229,7 +229,12 @@
 <section class="section">
     
     <!-- 根据内容来渲染，这里用作模块 -->
+    <div class="location-select" onclick="showLocation()">
+        筛选
+    </div>
+    <input type="hidden" class="location-input" >
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/location.js"></script>
     <div class="mokuai">
         <!--mokuai_title是模块名称  -->
     	<div class="mokuai_title">-&nbsp;健身会所&nbsp;-</div>
@@ -323,17 +328,25 @@
                 </dl>
             </div>
             
-            <!--循环区end-->
-            
+            <!--循环区end-->      
+        </div>
+    </div>   
+</section>
+<div class="location">
+    <div class="location-mask" onclick="hideLocation()"></div>
+    <div class="location-choose">
+        <div class="location-tab flex tc hid">
+            <a href="javascript:void(0)" class="tab-flex tab-province active">省份</a>
+            <a href="javascript:void(0)" class="tab-flex tab-city">城市</a>
+            <a href="javascript:void(0)" class="tab-flex tab-town">区县</a>
+        </div>
+        <div class="location-content flex">
+            <div class="location-province"></div>
+            <div class="location-city"></div>
+            <div class="location-town"></div>
         </div>
     </div>
-    
-    
-    
-    
-    
-</section>
-
+</div>
 <div class="mreturn">
 	<div class="gotop" onclick="scrollTops()"></div>
 </div>
@@ -354,7 +367,5 @@
 	    <div class="footer_text">Copyright © 2016-2017 All Rights Reserved. 浙ICP备16030349 </div>
 	</div>
 </footer>
-
-
 </body>
 </html>

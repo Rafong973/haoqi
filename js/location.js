@@ -33,6 +33,9 @@
 				var i = $(this).index();
 				setId(2,$(this));
 				var location = getdata();
+				$(".location-input").bind("oninput",inputChange(location));
+				$(".location-input").val(location);
+				hideLocation();
 			});
 		});
 })();
@@ -67,3 +70,40 @@ function getdata(){
 	}
 	return name;
 }
+
+function showLocation(){
+	$(".location").css({
+		'-webkit-transform' : 'translate3d(0, 0 ,0)',
+		'transform'         : 'translate3d(0, 0 ,0)'
+	});
+}
+function hideLocation(){
+	$(".location").css({
+		'-webkit-transform' : 'translate3d(0, 100% ,0)',
+		'transform'         : 'translate3d(0, 100%,0)'
+	});
+	$(".location-city").html("");
+	$(".location-town").html("");
+	tabTransiton(0);
+	$(".tab-province").text("省份");
+	$(".tab-city").text("城市");
+	$(".tab-town").text("区县");
+}
+
+$("#location-btn").click(function(event) {
+	var input = document.getElementsByClassName("input");
+	var judge = vail(input,'location');
+	if(judge){
+		var tel = $("[name=tel]").val();
+		var location = $(".location-input").val() + $(".detail-location").val();
+		var name = $(".location-name").val();
+		$.post('/location', {tel: tel,name:name,location:location}, function(res) {
+			if(res.status==1){
+				window.location.href = 'buy.html'
+			}else{
+				app.alert("失败，请重新提交");
+				return;
+			}
+		});
+	}
+});
