@@ -556,8 +556,10 @@ html{
 }
 .my-row{
     background-color: #fff;
-    border-top: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8;
+    .flex{
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+    }
     a{
         [class*="icon-"]{
             font-size: 18px;
@@ -573,4 +575,68 @@ html{
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.my-opera-head{
+    height: 25px;
+    padding: 5px 0;
+    border-bottom: 1px solid #e8e8e8;
+    .my-opera-select,.my-opera-input{
+        width: 50%;
+        height: 100%;
+    }
+    .row{
+        height: inherit;
+    }
+    .my-opera-input{
+        text-align: right;
+        height: 90%;
+    }
+    .my-select,.my-input{
+        height: 100%;
+        width: 60%;
+        border-radius: 5px;
+        text-indent: 5px;
+        border: 1px solid #e8e8e8;
+    }
+}
+.my-opera{
+    .my-opera-span{
+        padding:15px 0;
+        a{
+            background-color: #5aa700;
+            color: #fff;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .disabled{
+            background-color: #dfdfdf;
+        }
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+    thead{
+        border-bottom: 1px solid #e8e8e8;
+        th{
+            padding: 8px 0;
+            &:not(:last-child){
+                border-right: 1px solid #e8e8e8;
+            }
+        }
+    }
+    tbody{
+        background-color: #f9f9f9;
+        tr{
+            border-bottom: 1px solid #e8e8e8;
+        }
+        td{
+            padding: 8px 0;
+            &:not(:last-child){
+                border-right: 1px solid #e8e8e8;
+            }
+        }
+    }
 }
