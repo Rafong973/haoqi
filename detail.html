@@ -46,6 +46,7 @@
 </head>
 
 <input type="hidden" value="jianshen" id="nav-name">
+<input type="hidden" value="11" id="essay" >
 
 <body class="f5f5f5">
 <header class="index_header">
@@ -298,6 +299,22 @@
         </div>
     </div>
     
+    <div class="exceptional tc">
+        <a href="javascript:void(0)" class="exce-btn">赏</a>
+        <p>如果觉得这篇文章好，可以给作者打赏喔！</p>
+        <p>共有<span class="active">52</span>人打赏</p>
+        <div class="exce-row-div" style="display: none;">
+            <div class="exce-row hid">
+                <a href="javascript:void(0)"><input type="number" value="1" readonly="readonly">元</a>
+                <a href="javascript:void(0)"><input type="number" value="5" readonly="readonly">元</a>
+                <a href="javascript:void(0)"><input type="number" value="10" readonly="readonly">元</a>
+                <a href="javascript:void(0)"><input type="number" value="20" readonly="readonly">元</a>
+                <a href="javascript:void(0)"><input type="number" value="50" readonly="readonly">元</a>
+                <a href="javascript:void(0)"><input type="number">元</a>
+            </div>
+            <a href="javascript:void(0)" class="link-submit dd-title exce-submit">确定打赏</a>
+        </div>
+    </div>
     <div class="comments">
         <div class="detail-title">
             <p class="big-title">评论</p>
@@ -307,6 +324,7 @@
         </div>
         <div class="row hid">
             <a href="#" class="fr link-submit dd-title">发表评论</a>
+
         </div>
     </div>
 </section>
@@ -333,5 +351,31 @@
 </footer>
 
 <script type="text/javascript" src="js/index.js"></script>
+<script>
+    $(".exce-btn").click(function(event) {
+        $(".exce-row-div").show();
+    });
+    $(".exce-row a").click(function(){
+        $(this).parents('.exce-row').find("a").removeClass('active');
+        $(this).addClass('active');
+    })
+    $(".exce-submit").click(function(event) {
+        // 获取文章id
+        var id = $("#essay").val();
+        var dom = $(".exce-row").find(".active");
+        var money = dom.find("input").val();
+        if(dom.length < 1 || !money){
+            app.alert("请选择打赏金额");
+            return false;
+        }
+        $.post('/path/to/file', {id: id,money:money}, function(res){
+            if(res.status==1){
+                app.alert("打赏成功");
+            }else{
+                app.alert("失败，请重试");
+            }
+        });
+    });
+</script>
 </body>
 </html>

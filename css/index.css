@@ -574,3 +574,69 @@ html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.exceptional{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    overflow-y: hidden;
+    .exce-btn{  
+        display: block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #5aa700;
+        color: #5aa700;
+        box-shadow: 2px 2px 2px #d0d0d0;
+        background-color: #fff;
+    }
+    p{
+        margin-top: 10px;
+        color: #666;
+    }
+}
+.exce-row{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    .active{
+        background: #5aa700;
+        color: #fff;
+        input{
+            color: #fff;
+        }
+    }
+    a{ 
+        display: table;
+        width: 55px;
+        margin-right: 14px;
+        color: #5aa700;
+        border: 1px solid #5aa700;
+        float: left;
+        margin-bottom: 10px;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        border-radius: 5px;
+        &:nth-child(3),
+        &:nth-child(6){
+            margin-right: 0;
+        }
+    }
+    input{
+        display: table-cell;
+        width: 60%;
+        height: inherit;
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        color: #5aa700;
+        text-align: center;
+    }
+}
