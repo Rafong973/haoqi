@@ -725,3 +725,9 @@ html{
 .my-opera-content-row{
     display: none;
 }
+.line{
+    line-height: 25px;
+}
+.half{
+    width: 50%;
+}
