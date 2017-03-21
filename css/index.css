@@ -17,6 +17,12 @@ html{
 .link{color: #4c8ab7;}
 .fl{float: left;}
 .fr{float: right}
+.pad-top{
+        padding-top: 20px;
+    }
+.pad-bot{
+    padding-bottom: 20px;
+}
 .fff{color: #fff;}
 .white{background-color: #fff;}
 .flex-box{flex-wrap: wrap}
@@ -567,6 +573,10 @@ html{
         padding: 5px 0;
         font-size: 12px;
     }
+    .dd-title{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 
 [class*="icon-"]{
@@ -666,6 +676,13 @@ html{
     }
 }
 .my-opera{
+    display: none;
+    .current{
+        display: block;
+    }
+    .active{
+        color: #5aa700;
+    }
     .my-opera-span{
         padding:15px 0;
         a{
@@ -704,4 +721,7 @@ html{
             }
         }
     }
+}
+.my-opera-content-row{
+    display: none;
 }

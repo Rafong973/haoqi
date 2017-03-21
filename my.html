@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 适应移动端start -->
     <!-- 视口标签 -->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalablen=o, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <!-- 删除苹果默认的工具栏和菜单栏 -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- 设置苹果工具栏颜色 -->
@@ -55,7 +55,7 @@
                     <img src="images/6.gif" alt="头像" width="100%" height="100%">
                 </div>
                 <div class="my-opeara tc">
-                    <a href="" class="icon-user">&nbsp;个人中心</a>
+                    <a class="icon-user">&nbsp;个人中心</a>
                     <a href="javascript:void(0)" class="icon-edit">&nbsp;发布信息</a>
                 </div>
             </div>
@@ -63,19 +63,19 @@
         <div class="my-content">
             <div class="my-row">
                 <div class="flex">
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-word"></p>
                         <p>我的发布</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-shoucang"></p>
                         <p>我的收藏</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-pinglun"></p>
                         <p>我的评论</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-huifu"></p>
                         <p>我的回复</p>
                     </a>
@@ -100,6 +100,7 @@
                     </div>
                     <div class="my-opera-content hid">
                         <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
                             <table>
                                 <thead>
                                     <tr>
@@ -123,57 +124,326 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>摘要</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>
+                                            2017-03-14
+                                        </td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>评论文章</th>
+                                        <th>评论内容</th>
+                                        <th>评论时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>10</td>
+                                        <td>
+                                            2017-03-14
+                                        </td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文章标题</th>
+                                        <th>回复内容</th>
+                                        <th>回复时间</th>
+                                        <th>回复者</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>不知道</td>
+                                        <td>10</td>
+                                        <td>
+                                            2017-03-14
+                                        </td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="row hid my-opera-span">
                         <div class="fl">
-                            显示<span>0</span>到<span>0</span>条，共<span></span>条记录
+                            显示<span>0</span>到<span>0</span>条，共<span class="record-num"></span>条记录
                         </div>
                         <div class="fr">
-                            <a href="javascript:void(0)">前一页</a>
-                            <a href="javascript:void(0)">后一页</a>
+                            <a href="javascript:void(0)" class="page-btn">前一页</a>
+                            <a href="javascript:void(0)" class="page-btn">后一页</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="my-row">
                 <div class="flex">
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-youjian"></p>
                         <p>系统邮件</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-gouwuche"></p>
                         <p>待付款商品</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-gouwuche1"></p>
                         <p>已买到的商品</p>
                     </a>
                 </div>
-            </div>
-            <div class="my-row">
-                <div class="flex">
-                    <a href="" class="tc flex-row">
-                        <p class="icon-xinxi"></p>
-                        <p>我的信息</p>
-                    </a>
-                    <a href="" class="tc flex-row">
-                        <p class="icon-mima"></p>
-                        <p>我的密码</p>
-                    </a>
-                    <a href="" class="tc flex-row">
-                        <p class="icon-bind"></p>
-                        <p>帐号绑定</p>
-                    </a>
+                 <div class="my-opera">
+                    <div class="my-opera-head hid">
+                        <div class="row">
+                            <div class="my-opera-select fl">
+                                <select class="my-select" name="page">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                <label>条记录页</label>
+                            </div>
+                            <div class="my-opera-input fr"> 
+                                <label>搜索：</label>
+                                <input type="text" class="my-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-opera-content hid">
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>邮件标题</th>
+                                        <th>发送时间</th>
+                                        <th>发件人</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>
+                                            2017-03-14
+                                        </td>
+                                        <td>不知道</td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>订单号</th>
+                                        <th>宝贝</th>
+                                        <th>单价(元)</th>
+                                        <th>数量</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>你猜</td>
+                                        <td>10</td>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="my-opera-content-row">
+                            <input type="hidden" value="10" class="content-num">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>订单号</th>
+                                        <th>宝贝</th>
+                                        <th>单价(元)</th>
+                                        <th>数量</th>
+                                        <th>购买时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>我叫帅小白</td>
+                                        <td>不知道</td>
+                                        <td>10</td>
+                                        <td>
+                                            2017-03-14
+                                        </td>
+                                        <td>无</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row hid my-opera-span">
+                        <div class="fl">
+                            显示<span>0</span>到<span>0</span>条，共<span class="record-num"></span>条记录
+                        </div>
+                        <div class="fr">
+                            <a href="javascript:void(0)" class="page-btn">前一页</a>
+                            <a href="javascript:void(0)" class="page-btn">后一页</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="my-row">
                 <div class="flex">
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
+                        <p class="icon-xinxi"></p>
+                        <p>我的信息</p>
+                    </a>
+                    <a class="tc flex-row my-opera-btn">
+                        <p class="icon-mima"></p>
+                        <p>我的密码</p>
+                    </a>
+                    <a class="tc flex-row my-opera-btn">
+                        <p class="icon-bind"></p>
+                        <p>帐号绑定</p>
+                    </a>
+                </div>
+                <div class="my-opera">
+                    <div class="my-opera-content hid pad-top">
+                        <div class="my-opera-content-row">
+                            <div class="form-group">
+                                <label class="label">手机号码：</label>
+                                <input type="number" class="name input" name="tel" value="1552117999">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+                                <select name="age" class="name input">
+                                    <option value="">保密</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：</label>
+                                <input type="text" class="name input" name="age" value="1998-08-08" readonly="readonly">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">个人网址：</label>
+                                <input type="text" class="name input" name="link" value="" placeholder="http://">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">个人签名：</label>
+                                <input type="text" class="name input" name="signature" value="" placeholder="写出你的个性">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">所&nbsp;在&nbsp;地&nbsp;：</label>
+                                <input type="text" class="name input" name="address" value="">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">个人简介：</label>
+                                <input type="text" class="name input" name="resume" value="" placeholder="写出你的简介">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q：</label>
+                                <input type="number" class="name input" name="qq" value="">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+                                <input type="email" class="name input" name="email" value="">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">真实姓名：</label>
+                                <input type="text" class="name input" name="turnName" value="">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">身份证号：</label>
+                                <input type="text" class="name input" name="ident" value="">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label"></label>
+                                <a href="javascript:void(0)" class="link-submit lar-btn tc" id="reg">保存</a>
+                            </div>
+                        </div>
+                        <div class="my-opera-content-row">
+                            <div class="form-group">
+                                <label class="label">原始密码：</label>
+                                <input type="password" class="name input" name="oldword">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">新&nbsp;密&nbsp;码&nbsp;：</label>
+                                <input type="password" class="name input" name="password">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">确认密码：</label>
+                                <input type="password" class="name input" name="passagain">
+                                <label class="tip-label"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label"></label>
+                                <a href="javascript:void(0)" class="link-submit lar-btn tc" id="reg">保存</a>
+                            </div>
+                        </div>
+                        <div class="my-opera-content-row tc">
+                            <div class="row hid pad-bot">
+                                <a href="javascript:void" class="link-submit dd-title">绑定QQ帐号</a>
+                                <a href="javascript:void" class="link-submit dd-title">绑定新浪微博帐号</a>
+                                <a href="javascript:void" class="link-submit dd-title">绑定微信帐号</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <div class="flex">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-vip"></p>
                         <p>会员升级</p>
                     </a>
-                    <a href="" class="tc flex-row">
+                    <a class="tc flex-row my-opera-btn">
                         <p class="icon-renzheng"></p>
                         <p>会员认证</p>
                     </a>
@@ -183,6 +453,19 @@
     </div>
 </section>
 
-
+<script>
+    $(".my-opera-btn").click(function(event) {
+        var dom = $(this).parents('.my-row').find(".my-opera");
+        var index = $(this).index();
+        var child = dom.find(".my-opera-content-row").eq(index);
+        var num = child.find(".content-num").val();
+        dom.show();
+        $(this).parents('.my-row').find(".my-opera-btn").removeClass('active');
+        dom.find(".my-opera-content-row").removeClass('current');
+        child.addClass('current');
+        $(this).addClass('active');
+        if(num) dom.find(".record-num").text(num);
+    });
+</script>
 </body>
 </html>
