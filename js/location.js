@@ -49,8 +49,8 @@ $(".tab-flex").click(function() {
 function tabTransiton(index){
 	var w = $(window).width();
 	$(".location-content").css({
-		'-webkit-transform' : 'translate3d('+ '-' + w*index+ 'px' +', 0 ,0)',
-		'transform'         : 'translate3d('+ '-'+ w*index + 'px' +', 0 ,0)'
+		'-webkit-transform' : 'translate3d('+ '-' + w*index+ 'px, 0 ,0)',
+		'transform'         : 'translate3d('+ '-'+ w*index + 'px, 0 ,0)'
 	});
 	$(".tab-flex").removeClass('active');
 	$(".tab-flex").eq(index).addClass('active');

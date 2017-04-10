@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 适应移动端start -->
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>健身会所</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/index.css"/>
+</head>
+
+
+
+<body class="f5f5f5">
+<header class="index_header">
+    <div class="index_header_box">
+        <div class="index_login">
+            <a href="login.html">
+                <img src="images/user.png" />
+            </a>
+        </div>
+        <div class="index_logo">
+            <a href="#">
+                <img src="images/haoqi.png" alt="">
+                浩启网
+            </a>
+        </div>
+        <div class="index_sou">
+            <a href="#">
+                <img src="images/seek-bg.png" />
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" class="search-input">
+        </div>
+    </div>
+</header>
+<div class="nav-mask"></div>
+<!-- <nav class="nav">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide nav-slide" href="index.html" data="index">首页</a>
+            <a class="swiper-slide nav-slide" data="jianshen">
+                <span>健身运动</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>健身会所</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>游泳馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>瑜伽馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>舞蹈室</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>羽毛球馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>乒乓球馆</span>
+                    </li>
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>养生文化</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>健康饮食</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>户外休闲</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>道教养生</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>佛家参禅</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>茶艺馆</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>中医养生</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>中医养生</span>
+                    </li>
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>武术精髓</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>跆拳道</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>太极拳</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>八段锦</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>兵器</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>泰拳</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>中医养生</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>中医养生</span>
+                    </li>
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>时尚Model</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>时尚模特</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>健康模特</span>
+                    </li>
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>生活乐趣</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>生活小妙招</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>轻松娱乐</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>搞笑段子</span>
+                    </li>
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>明星导师</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>健身</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>养生</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>武术</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>禅师</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>真人</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>形体师</span>
+                    </li>   
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide">
+                <span>视频专区</span>
+                <ul class="nav-ul">
+                    <li class="nav-li" data="module.html">
+                        <span>舞蹈艺术</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>娱乐视频</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>武术视频</span>
+                    </li>
+                    <li class="nav-li" data="module.html">
+                        <span>健身运动</span>
+                    </li>  
+                </ul>
+            </a>
+            <a class="swiper-slide nav-slide" data="commodity" href="commodity.html">
+                <span>购物栏目</span>
+            </a>
+            <a class="swiper-slide nav-slide" href="concart.html">
+                <span>联系我们</span>
+            </a>
+        </div>
+    </div>
+</nav> -->
+<section class="section">
+    <div class="message-row">
+        <div class="row">
+            <div class="message-img tc">
+                <img src="images/6.gif" height="50" width="50">
+            </div>
+            <div class="message-row tc">
+                <p>
+                    <b>昵称：</b>
+                    <span>123123123132</span>
+                </p>
+                <p>
+                    <b>性别：</b>
+                    <span>女</span>
+                </p>
+                <p>
+                    <b>生日：</b>
+                    <span>12123123123</span>
+                </p>
+                <p>
+                    <b>个人网址：</b>
+                    <span>
+                        sdfsdfsdfsdfsdf
+                    </span>
+                </p>
+                <p>
+                    <b>
+                        个性签名：
+                    </b>
+                    <span>sfgsdfgsdrf</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- 根据内容来渲染，这里用作模块 -->
+
+</section>
+
+</body>
+</html>
