@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 适应移动端start -->
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, user-scalablen=o, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>提现与银行卡</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/icon/iconfont.css"/>
+</head>
+
+<body class="f5f5f5">
+    <!-- 在这增加头部 -->
+    <div class="card">
+        <!-- 这里做下判断 -->
+        <div class="no-card tc none">
+            目前没有添加任何银行卡，你可以添加了
+        </div>
+        <div class="card-row">
+            <ul>
+                <li class="num">
+                    <a href="javascript:void(0)" class="bank-btn hid">
+                        <div class="row">
+                            <div class="fl">
+                                <img src="" alt="" width="40" height="40" class="bank-img">
+                            </div>
+                            <div class="bank-font fl">
+                                <p class="bank-num">6214 0022 0000 0000</p>
+                                <p class="bank-name">农业银行</p>
+                                <!-- 这里是银行卡号码，传过来，处理完成我会删除 -->
+                                <input type="hidden" value="6214831202298469" class="bank-value">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tc">
+            <a href="javascript:void(0)" class="link-submit lar-btn tc">添加银行卡</a>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var b = $(".bank-value");
+            for(var i=0;i<b.length;i++){
+                // $.ajax({
+                //     url: 'https://ccdcapi.alipay.com/validateAndCacheCardInfo.json',
+                //     type: 'GET',
+                //     dataType: 'jsonp',
+                //     data: {_input_charset_: 'utf-8',
+                //             cardNo:$(".bank-value").eq(i).val(),
+                //             cardBinCheck:true
+                //           },
+                // })
+                // .done(function() {
+                //     console.log("success");
+                // })
+                // .fail(function() {
+                //     console.log("error");
+                // })
+                // .always(function() {
+                //     console.log("complete");
+                // });
+                $.get('https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo='+ $(".bank-value").eq(i).val() +'&cardBinCheck=true', function(data) {
+                       
+               }); 
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
