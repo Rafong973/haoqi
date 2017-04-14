@@ -835,3 +835,7 @@ html{
 .result-false{
     color: #d81e06;
 }
+.result-back{
+    display: inline-block;
+    margin-top: 20px;
+}
