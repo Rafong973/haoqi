@@ -818,3 +818,20 @@ html{
         }
     }
 }
+.result-font{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.result-true{
+    color: #36ab60;
+}
+.result-row{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.result-false{
+    color: #d81e06;
+}

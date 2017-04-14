@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 适应移动端start -->
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>提现</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/index.css"/>
+</head>
+
+<input type="hidden" value="jianshen" id="nav-name">
+<input type="hidden" value="11" id="essay" >
+
+<body class="f5f5f5">
+    <div class="big-box">
+        <div class="result-row tc none">
+            <!-- 这里要做下判断，如果把判断结果放在url的话，result=0就是失败，result=1就是成功。如果要根据渲染结果，把下面那段js注释掉 -->
+            <div class="true none">
+                <div class="result-img tc">
+                    <img src="images/true.png" alt="支付成功">
+                </div>
+                <p class="result-true result-font">提现成功</p>
+            </div>
+            <div class="false none">
+                <div class="result-img tc">
+                    <img src="images/false.png" alt="支付成功">
+                </div>
+                <p class="result-false result-font">提现失败</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var r = document.getElementsByClassName("result-row")[0];
+            var l = window.location.href;
+            var j = l.indexOf('result=');
+            var t = document.getElementsByClassName("true")[0];
+            var f = document.getElementsByClassName("false")[0];
+            if(j<0){
+                f.style.display = 'block';
+            }else{
+                var k = parseInt(l.substr(j+7,j+1));
+                if(k==0){
+                    f.style.display = 'block';
+                }else if(k==1){
+                    t.style.display = 'block';
+                }else{
+                    f.style.display = 'block';
+                }
+            }
+            r.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
