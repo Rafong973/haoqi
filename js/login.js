@@ -144,35 +144,59 @@ function switchDom(dom,location){
             var reg = /(^[0-9]{3,4}\-[0-9]{7,8}$)|(^[0-9]{7,8}$)|(^\([0-9]{3,4}\)[0-9]{3,8}$)|(^0{0,1}1[3-9][0-9]{9}$)/;
             if(reg.test(v)){
                 j = true;
-                p.innerText = '';
+                if(p.length>0){
+                    p.innerText = '';
+                }
             }else{
                 j = false;
-                p.innerText = '手机号码不正确';
+                if(p.length>0){
+                    p.innerText = '手机号码不正确';
+                }else{
+                    app.alert('手机号码不正确');
+                }
             }
         break;
-        case 'name':
-        case 'code':
-        case 'password':
-        case 'meCode':
-            if(v){
-                p.innerText = '';
-                j = true;
-            }else{
-            	var tt = s.substr(0,s.length-1);
-                p.innerText = tt.trim() + '不能为空，请填写正确';
+        case 'type':
+            if(!v){
+                app.alert('类型不能为空，请填写正确');
                 j = false;
+            }else{
+                j = true;
             }
         break;
         case 'passagain':
-        	var pass = document.getElementsByClassName('password')[0];
-        	if(v !== pass.value ){
-        		j = false;
-        		p.innerText = '密码不匹配，请重新输入';
-        	}else{
-        		j = true;
-        		p.innerText = ' ';
-        	}
-    	break;
+            var pass = document.getElementsByClassName('password')[0];
+            if(v !== pass.value ){
+                if(p.length >0){
+                    p.innerText = '密码不匹配，请重新输入';
+                }else{
+                    app.alert('密码不匹配，请重新输入');
+                }
+                j = false;
+                
+            }else{
+                j = true;
+                if(p.length>0){
+                    p.innerText = '';
+                }
+            }
+        break;
+        default:
+            if(v){
+                if(p.length>0){
+                    p.innerText = '';
+                }
+                j = true;
+            }else{
+            	var tt = s.substr(0,s.length-1);
+                if(p.length > 0){
+                    p.innerText = tt.trim() + '不能为空，请填写正确';
+                }else{
+                    app.alert(tt.trim() + '不能为空，请填写正确');
+                }
+                j = false;
+            }
+        break;
     }
     return j;
 }

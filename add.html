@@ -39,6 +39,8 @@
 	<title>发布文章</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/base.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/add.css"/>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
 
 </head>
 <body class="f5f5f5">
@@ -46,71 +48,81 @@
 	<div class="add-type">
 		<div class="add-type-data">
 			<form action="" method="post">
-			<div class="add-data-row">
-				<div class="add-data-lsit">
-					<div class="row fff">
-						<div class="form-group bor-bot">
-							<label class="add-data-label"><b>文章标题：</b></label>
-							<input type="text"  class="add-data-input no-out data-vail" placeholder="输入文章标题">
-						</div>
-						<div class="form-group bor-bot">
-							<label class="add-data-label"><b>发布人姓名：</b></label>
-							<input type="text" class="add-data-input no-out data-vail" placeholder="输入发布人姓名">
-						</div>
-						<div class="form-group bor-bot">
-							<label class="add-data-label"><b>发布类型：</b></label>
-							<select class="add-data-input add-data-select no-out data-vail">
-								<option value="">选择项目类型</option>
-								<option value="1">健身</option>
-							</select>
-						</div>
-						<div class="form-group bor-bot">
-							<label class="add-data-label"><b>微信：</b></label>
-							<input type="text" name="char_qq" class="add-data-input no-out data-vail" placeholder="输入微信号">
-						</div>
-						<div class="form-group bor-bot">
-							<label class="add-data-label"><b>手机号码：</b></label>
-							<input type="text" name="char_weixin" class="add-data-input no-out data-vail" placeholder="输入手机号码">
-						</div>
-					</div>
-				</div>
-				<div class="blank"></div>
-				<div class="add-data-list fff">
-					<div class="row">
-						<div class="form-group bor-bot">
-							<label class="add-data-top"><b>项目简介：</b></label>
-							<textarea name="char_intro" class="add-data-textarea data-vail no-out"></textarea placeholder="需要写入简介">
-						</div>
-						<div class="form-group bor-bot">
-							<label class="add-data-top"><b>项目正文内容：</b></label>
-							<textarea name="char_content" class="add-data-textarea data-vail no-out"></textarea>
+				<div class="add-data-row">
+					<div class="add-data-lsit">
+						<div class="row fff">
+							<div class="form-group bor-bot">
+								<label class="add-data-label"><b>文章标题：</b></label>
+								<input type="text" name="title"  class="add-data-input no-out" placeholder="输入文章标题">
+							</div>
+							<div class="form-group bor-bot">
+								<label class="add-data-label"><b>发布人姓名：</b></label>
+								<input type="text" name="name" class="add-data-input no-out" placeholder="输入发布人姓名">
+							</div>
+							<div class="form-group bor-bot">
+								<label class="add-data-label"><b>发布类型：</b></label>
+								<select name="type" class="add-data-input add-data-select no-out">
+									<option value="">选择项目类型</option>
+									<option value="1">健身</option>
+								</select>
+							</div>
+							<div class="form-group bor-bot">
+								<label class="add-data-label"><b>微信：</b></label>
+								<input type="text" name="char_qq" class="add-data-input no-out" name="wechat" placeholder="输入微信号">
+							</div>
+							<div class="form-group bor-bot">
+								<label class="add-data-label"><b>手机号码：</b></label>
+								<input type="number" name="tel" class="add-data-input no-out" placeholder="输入手机号码">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="blank"></div>
-				<div class="add-data-list fff">
-					<div class="row upload-box">
-						<p class="em">项目封面</p>
-						<div class="upload-pic">
-							<label for="upload" class="upload-label">
-								上传图片
-							</label>
-							<input type="file" name="file" id="upload" class="upload data-vail" onchange="uploadImage(this)">
-							<span class="em">
-								建议尺寸:<span class="deep">450px*500px</span>
-							</span>
+					<div class="blank"></div>
+					<div class="add-data-list fff">
+						<div class="row">
+							<div class="form-group bor-bot">
+								<label class="add-data-top"><b>项目简介：</b></label>
+								<textarea name="resume" class="add-data-textarea no-out"></textarea placeholder="需要写入简介">
+							</div>
+							<div class="form-group bor-bot">
+								<label class="add-data-top"><b>项目正文内容：</b></label>
+								<textarea name="content" class="add-data-textarea no-out"></textarea>
+							</div>
 						</div>
 					</div>
+					<div class="blank"></div>
+					<div class="add-data-list fff">
+						<div class="row upload-box">
+							<p class="em">项目封面</p>
+							<div class="upload-pic">
+								<label for="upload" class="upload-label">
+									上传图片
+								</label>
+								<input type="file" name="file" id="upload" class="upload" onchange="uploadImage(this)">
+								<span class="em">
+									建议尺寸:<span class="deep">450px*500px</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="blank"></div>
+					<div class="tc row">
+						<a href="javascript:void(0)" class="btn add-submit">提交</a>
+					</div>
+					<div class="blank"></div>
 				</div>
-				<div class="blank"></div>
-				<div class="tc row">
-					<a href="javascript:void(0)" class="btn">提交</a>
-				</div>
-				<div class="blank"></div>
-			</div>
 			</form>
 		</div>
 	</div>
 
+	<script src="js/login.js"></script>
+	<script>
+		$(".add-submit").click(function(event) {
+			var data = document.getElementsByClassName("add-data-input");
+			if(vail(data)){
+				var d = getdata(data);
+				alert(d);
+			}
+		});
+	</script>
 </body>
 </html>
