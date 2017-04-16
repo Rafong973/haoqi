@@ -207,7 +207,7 @@ function getdata(dom){
     for(var i=0;i<d;i++){
         if(dom[i].value){
             var name = dom[i].getAttribute('name');
-            if(name=='passagain') continue;
+            if(name =='passagain') continue;
             temp += dom[i].getAttribute('name') + '=' + dom[i].value + '&';
         }
     }
