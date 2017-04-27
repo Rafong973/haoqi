@@ -138,7 +138,7 @@ html{
     word-break: break-word;}
 .discuss_time{ width:100%; text-align:right; font-size:1.3rem; margin-top:5px;}
 
-.footer{ width:100%;background:#3E3E3E;margin-bottom: 50px;}
+.footer{padding-bottom: 50px; width:100%;background:#3E3E3E;margin-bottom: 50px;}
 .footer_box{ padding:10px; color:#8f8f8f; text-align:center;}
 .footer_text{ width:100%;font-size:1.4rem; line-height:20px; margin-top:5px;}
 .footer_lian{ width:100%;}
@@ -353,6 +353,7 @@ html{
 /* 购买 */
 .buy{
     line-height: 40px;
+    height: 40px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -363,7 +364,9 @@ html{
     color: #fff;
     background-color: #c40000;
     padding: 0 20px;
-    border-top: 1px solid #c40000
+    border-top: 1px solid #c40000;
+    display: inline-block;
+    height: 100%;
 }
 .shop-detail{
     margin-top: 10px;
@@ -375,6 +378,31 @@ html{
     text-align: right;
     color: #c40000;
 
+}
+.input-btn-btn{
+    margin-top: 20px;
+    border: 0;
+    outline: 0;
+    width: 100px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #5aa700;
+    padding: 5px 0;
+}
+.tip-mask{
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.pic-text img{
+    width: 100%;
 }
 .num-btn{
     color: #c0c0c0;

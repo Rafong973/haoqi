@@ -500,21 +500,34 @@
                 </div>
             </div>
         </div>
+        <div class="tc">
+            <input type="submit" value="退出" class="input-btn-btn">
+        </div>
     </div>
 </section>
 
 <script>
+    var i = 0;
     $(".my-opera-btn").click(function(event) {
+        i++;
+        if(i<2){
+            tip.alert("再次点击可隐藏信息");
+        }
         var dom = $(this).parents('.my-row').find(".my-opera");
         var index = $(this).index();
         var child = dom.find(".my-opera-content-row").eq(index);
         var num = child.find(".content-num").val();
-        dom.show();
-        $(this).parents('.my-row').find(".my-opera-btn").removeClass('active');
-        dom.find(".my-opera-content-row").removeClass('current');
-        child.addClass('current');
-        $(this).addClass('active');
-        if(num) dom.find(".record-num").text(num);
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            dom.hide();
+        }else{
+            dom.show();
+            $(this).parents('.my-row').find(".my-opera-btn").removeClass('active');
+            dom.find(".my-opera-content-row").removeClass('current');
+            child.addClass('current');
+            $(this).addClass('active');
+            if(num) dom.find(".record-num").text(num);
+        }
     });
 </script>
 </body>
